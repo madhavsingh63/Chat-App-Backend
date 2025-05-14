@@ -1,6 +1,6 @@
 import express from "express";
 import env from "dotenv";
-import DBConnect from "../config/database.js";
+import DBConnect from "./config/database.js";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import cookieParser from "cookie-parser";
@@ -23,7 +23,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/message", messageRoutes);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Baat Chit m apka shuagt hai</h1>");
+  res.send("<h1>Baat Chit m apka shuagat hai</h1>");
 });
 
 app.listen(PORT, () => {
